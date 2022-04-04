@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-aws.html 
+keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks 
+summary: AWS では、いくつかの Cloud Volumes ONTAP 構成がサポートされます。 
+---
+= AWS でサポートされる構成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+AWS では、いくつかの Cloud Volumes ONTAP 構成がサポートされます。
+
+
+
+== ライセンスでサポートされている構成
+
+Cloud Volumes ONTAP は、フォールトトレランスとノンストップオペレーションを実現するために、 AWS ではシングルノードシステムとして、ハイアベイラビリティ（ HA ）ペアのノードとして利用できます。
+
+シングルノードシステムの HA ペアへのアップグレードはサポートされていません。シングルノードシステムと HA ペアを切り替える場合は、新しいシステムを導入し、既存のシステムから新しいシステムにデータをレプリケートする必要があります。
+
+[cols="h,d,d,d,d,d,d"]
+|===
+|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースのライセンス | 容量単位のライセンスです 
+
+
+| 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 2TiB | 10TiB | 368TiB ^1 ^ | ライセンスあたり 368 TiB ^1^ | 2 PiB ^1 ^ 
+
+
+| サポートされている EC2 インスタンスタイプ ^2  a| 
+* c4.4xlarge
+* c4.8xlarge を使用する場合
+* c5.9xlarge のサイズ
+* c5.18 × ラージ
+* c5d.csi^3^
+* c5d.9xlarge ^3^
+* c5d.18 x ラージ ^3^
+* c5n.9xlarge ^4^
+* c5n.18 x ラージ ^4^
+* m4.xlarge
+* m4.2xlarge
+* m4.mc
+* m5.xlarge のように指定します
+* m5.2xlarge
+* m5.mc
+* m5.16 x ラージ
+* m5d.8xlarge ^3^
+* m5d.12xlarge ^3^
+* R4.xlarge （ R4.xlarge ）
+* r4.2xlarge
+* R5.xlarge （ R5.xlarge ）
+* r5.2xlarge
+* r5.8xlarge
+* r5.12xlarge ^5^
+* r5d.2xlarge ^3^
+
+ a| 
+* m4.xlarge
+* m5.xlarge のように指定します
+
+ a| 
+* m4.2xlarge
+* m5.2xlarge
+* R4.xlarge （ R4.xlarge ）
+* R5.xlarge （ R5.xlarge ）
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge を使用する場合
+* c5.9xlarge のサイズ
+* c5.18 × ラージ
+* c5d.csi^3^
+* c5d.9xlarge ^3^
+* c5d.18 x ラージ ^3^
+* c5n.9xlarge ^4^
+* c5n.18 x ラージ ^4^
+* m4.mc
+* m5.mc
+* m5.16 x ラージ
+* m5d.8xlarge ^3^
+* m5d.12xlarge ^3^
+* r4.2xlarge
+* r5.2xlarge
+* r5.8xlarge
+* r5.12xlarge ^5^
+* r5d.2xlarge ^3^
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge を使用する場合
+* c5.9xlarge のサイズ
+* c5.18 × ラージ
+* c5d.csi^3^
+* c5d.9xlarge ^3^
+* c5d.18 x ラージ ^3^
+* c5n.9xlarge ^4^
+* c5n.18 x ラージ ^4^
+* m4.xlarge
+* m4.2xlarge
+* m4.mc
+* m5.xlarge のように指定します
+* m5.2xlarge
+* m5.mc
+* m5.16 x ラージ
+* m5d.8xlarge ^3^
+* m5d.12xlarge ^3^
+* R4.xlarge （ R4.xlarge ）
+* r4.2xlarge
+* R5.xlarge （ R5.xlarge ）
+* r5.2xlarge
+* r5.8xlarge
+* r5.12xlarge ^5^
+* r5d.2xlarge ^3^
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge を使用する場合
+* c5.9xlarge のサイズ
+* c5.18 × ラージ
+* c5d.csi^3^
+* c5d.9xlarge ^3^
+* c5d.18 x ラージ ^3^
+* c5n.9xlarge ^4^
+* c5n.18 x ラージ ^4^
+* m4.xlarge
+* m4.2xlarge
+* m4.mc
+* m5.xlarge のように指定します
+* m5.2xlarge
+* m5.mc
+* m5.16 x ラージ
+* m5d.8xlarge ^3^
+* m5d.12xlarge ^3^
+* R4.xlarge （ R4.xlarge ）
+* r4.2xlarge
+* R5.xlarge （ R5.xlarge ）
+* r5.2xlarge
+* r5.8xlarge
+* r5.12xlarge ^5^
+* r5d.2xlarge ^3^
+
+
+
+
+| サポートされているディスクタイプ ^6^ 6+| 汎用 SSD （ GP3 および gp2 ）、プロビジョニングされた IOPS SSD （ io1 ）、スループット最適化 HDD （ st1 ） ^7^ 
+|===
+注：
+
+. 一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。その場合、で容量の制限に達することができます https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。ディスクの制限については、を参照してください link:reference-limits-aws.html["ストレージの制限"]。
+. EC2 インスタンスタイプを選択する場合は、そのインスタンスが共有インスタンスか専用インスタンスかを指定できます。
+. これらのインスタンスタイプには、 Cloud Volumes ONTAP が _Flash Cache _ として使用するローカル NVMe ストレージが含まれます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。Flash Cache のパフォーマンス向上を利用するには、すべてのボリュームで圧縮を無効にする必要があります。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
+. C5n.9xlarge および c5n.18xlarge は 9.7 P5 以降でサポートされています。
+. r5.12xlarge インスタンスタイプには、サポート性に関する既知の制限があります。パニックが原因でノードが予期せずリブートした場合は、トラブルシューティングに使用されるコアファイルがシステムで収集されず、問題の原因となる可能性があります。お客様はリスクと限定的なサポート条件に同意し、この状況が発生した場合はすべてのサポート責任を負います。
+. SSD を Cloud Volumes ONTAP Standard 、 Premium 、および BYOL とともに使用すると、書き込みパフォーマンスが向上します。
+. スループット最適化 HDD （ st1 ）を使用している場合、オブジェクトストレージへのデータの階層化は推奨されません。
+. AWS リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
+. Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
+
+
+
+
+== サポートされるディスクサイズ
+
+AWS では、アグリゲートに同じタイプおよびサイズのディスクを最大 6 本含めることができます。
+
+[cols="3*"]
+|===
+| 汎用 SSD （ GP3 および GP2 ） | プロビジョニングされた IOPS - SSD （ io1 ） | スループット最適化 HDD （ st1 ） 
+
+
+ a| 
+* 100GiB
+* 500 GiB
+* 1TiB
+* 2TiB
+* 4TiB 未満
+* 6TiB
+* 8TiB
+* 16TiB
+
+ a| 
+* 100GiB
+* 500 GiB
+* 1TiB
+* 2TiB
+* 4TiB 未満
+* 6TiB
+* 8TiB
+* 16TiB
+
+ a| 
+* 500 GiB
+* 1TiB
+* 2TiB
+* 4TiB 未満
+* 6TiB
+* 8TiB
+* 16TiB
+
+
+|===
