@@ -43,9 +43,7 @@
   <block id="7751129b8546a0da65fb379b1cc9c243" category="cell">1 ライセンスあたり 368 TiB</block>
   <block id="376c581ebe9ec9aa8853377f8538ebbd" category="cell">容量単位のライセンスです</block>
   <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 PiB</block>
-  <block id="2f9882645b2c32820ad085240bacb763" category="section-title">HA の場合、ライセンスの容量制限はノード単位か、 HA ペア全体に適用されるか</block>
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">容量制限は HA ペア全体の容量制限です。ノード単位ではありません。たとえば、 Premium ライセンスを使用する場合、両方のノード間で最大 368 TiB の容量を確保できます。</block>
-  <block id="fc9a388cd18c69244f22554de6f0d544" category="section-title">AWS の HA システムでは、ミラーリングされたデータは容量制限にカウントされますか。</block>
   <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">いいえ、できません。AWS HA ペアのデータは、障害発生時にデータを利用できるように、ノード間で同期的にミラーされます。たとえば、ノード A で 8TiB ディスクを購入した場合、 Cloud Manager は、ミラーリングされたデータに使用する 8 TiB のディスクをノード B にも割り当てます。16TiB の容量がプロビジョニングされましたが、ライセンスの上限には 8TiB しかカウントされません。</block>
   <block id="c029ebf0cab0f40812ebec7c644fef41" category="section-title">ディスクおよび階層化の制限は EC2 インスタンスごとに適用されます</block>
   <block id="64902ebf86d86e0c5dfcc29138584b73" category="paragraph">Cloud Volumes ONTAP は EBS ボリュームをディスクとして使用し、最大ディスクサイズは 16TiB です。以下のセクションでは、 EC2 インスタンスタイプごとにディスクと階層化の制限を示します。これは、多くの EC2 インスタンスタイプでディスクの制限が異なるためです。また、シングルノードシステムと HA ペアではディスク制限も異なります。</block>
@@ -606,7 +604,6 @@
   <block id="19fbf141e1ca3109ba425e8573c0abd5" category="paragraph">LIF の移行に時間がかかりすぎるためにノードを停止できない場合は、 reboot コマンドまたは halt コマンドを再試行してノードを停止してください。</block>
   <block id="157a4538d8adbcfa830439923f7be5bf" category="summary">このリリースノートでは、 Cloud Volumes ONTAP 9.7 の新機能、制限事項、および既知の問題について説明します。</block>
   <block id="b440c9b0c3ae0c42d32403ccefbe0375" category="doc">Cloud Volumes ONTAP 9.7 リリースノート</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">Cloud Manager のすべてのドキュメント</block>
   <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">リリースノートのホーム</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
@@ -651,4 +648,6 @@
   <block id="fed5c8246ca485a22abc959eb3025a8c" category="admonition">Cloud Managerには、無償トライアルが開始されたとき、7日が残ったとき、および1日が残っているときに通知が送信されます。例：<block ref="4c1747a7ecb096dffecedae45404dae8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="451e7fc5df78c19113abdb3f6a0dc54e" category="paragraph">容量単位のライセンスの取得方法については、以下をご覧ください。</block>
   <block id="fdb736034a6801c8a5010a511211a4a7" category="paragraph">Keystone Flexサブスクリプションの概要については、以下をご覧ください。</block>
+  <block id="5505ffcb759fb1c9c3793b2dd386cd82" category="inline-link">PAYGOとBYOLの違いを解説します</block>
+  <block id="e1e947c069bd154f04aefec0a6619873" category="paragraph">システムをPAYGOからノード単位のライセンスからBYOLへ（逆も同様）に変換することはサポートされていません。新しいシステムを導入し、そのシステムにデータをレプリケートする必要があります。<block ref="c9d55d60961394f2cbacfb1050626915" category="inline-link-rx"></block></block>
 </blocks>
