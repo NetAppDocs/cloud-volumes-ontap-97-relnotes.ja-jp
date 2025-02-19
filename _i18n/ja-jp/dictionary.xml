@@ -501,8 +501,6 @@
   <block id="4b6713b20325cd79e47d384880e9d318" category="paragraph">この処理を実行すると、ネットワークのパートナーノードへの移行が促進され、既知の問題が発生してもノードが停止することがないようになります。</block>
   <block id="19fbf141e1ca3109ba425e8573c0abd5" category="paragraph">LIF の移行に時間がかかりすぎるためにノードを停止できない場合は、 reboot コマンドまたは halt コマンドを再試行してノードを停止してください。</block>
   <block id="157a4538d8adbcfa830439923f7be5bf" category="summary">このリリースノートでは、 Cloud Volumes ONTAP 9.7 の新機能、制限事項、および既知の問題について説明します。</block>
-  <block id="b440c9b0c3ae0c42d32403ccefbe0375" category="doc">Cloud Volumes ONTAP 9.7 リリースノート</block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">リリースノートのホーム</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="sidebar">Azure</block>
@@ -521,9 +519,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">ネットアップコミュニティ</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central のブログです</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
-  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP クラウド</block>
-  <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP にはさまざまなライセンスオプションがあり、それぞれのニーズに合った消費モデルを選択できます。</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">容量ベースのライセンスは、 a_packag_ の形式で用意されています。Cloud Volumes ONTAP システムを導入する際には、ビジネスニーズに応じて、複数のライセンスパッケージから選択できます。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">これらのライセンスオプションの詳細については、こちらをご覧ください</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896TiB</block>
@@ -546,7 +541,6 @@
   <block id="cf8932e0b406d0080602ae2ba6050f34" category="paragraph"><block ref="a93831aad103880218b6184b641135d6" category="inline-link-rx"></block>。</block>
   <block id="9dc25dec6d124cf86502e589c40d61af" category="paragraph"><block ref="856eab59dd4487874302c47901a1ac92" category="inline-link-rx"></block>。</block>
   <block id="64440bb71539a777dc59cfbda8a3e5ee" category="list-text">この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。Flash Cache のパフォーマンス向上を利用するには、すべてのボリュームで圧縮を無効にする必要があります。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>。</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">BlueXPのすべてのマニュアル</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -562,4 +556,11 @@
 1つのデータ提供用SVMがCloud Volumes ONTAPシステム全体にまたがっています。</block>
   <block id="2dbd9a217bce4c7ba4ef467f57d6875c" category="list-text">Cloud Volumes ONTAP BYOLシングルノードまたはHAペアシステム用に複数のノードベースライセンスを購入して、368TiBを超える容量を割り当てることができます（テストおよびサポートされるシステム容量の上限である2PiBまで）。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>。Cloud Volumes ONTAPでは、テストおよびサポートされる最大システム容量2PiBまでサポートされますが、2PiBの制限を超えると、サポートされないシステム構成になります。</block>
   <block id="de9d6749570efc87e63811b5947fc250" category="list-text">AWS Secret CloudリージョンとTop Secret Cloudリージョンでは、Cloud Volumes ONTAP 9.12.1以降で複数のノードベースライセンスの購入がサポートされます。</block>
+  <block id="6b32e99bddf60938239aabe092cb4c16" category="paragraph">Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。それぞれのオプションで、ニーズに合った消費モデルを選択できます。</block>
+  <block id="27fe4eb3edbaff8f250e2d51f7462681" category="inline-link">パッケージ</block>
+  <block id="13dba612a4f942a80cbc82c5f678d57c" category="inline-link">容量ベースライセンスの詳細</block>
+  <block id="d994821c78c4538d3406d1baa52bc470" category="paragraph"><block ref="55cb08b70ffaa99b7ec18860c0180e14" category="inline-link-rx"></block> <block ref="7c9574dfed81dad53ed1c2acf3a874b5" category="inline-link-rx"></block></block>
+  <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">Azure VM拡張機能の使用に関する制限事項</block>
+  <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAPでは、Azure Virtual Machine（VM）拡張機能と導入環境内のVMアプリケーションはサポートされません。AzureでVM拡張機能を使用してCloud Volumes ONTAPを使用すると、運用に遅延が発生するため、NetAppではそれらを回避することを推奨</block>
+  <block id="397c7d6cf1f12b7b8d421a9c73013b76" category="sidebar">Cloud Volumes ONTAP 9.7リリースノート</block>
 </blocks>
