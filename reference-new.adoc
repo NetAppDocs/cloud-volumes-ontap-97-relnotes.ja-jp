@@ -112,7 +112,7 @@ Storage VM の追加作成は、 System Manager または CLI を使用して実
 * ドイツ西部中部（公共機関）
 
 
-https://cloud.netapp.com/cloud-volumes-global-regions["サポートされる Azure リージョンの一覧を参照してください"^]。
+https://bluexp.netapp.com/cloud-volumes-global-regions["サポートされる Azure リージョンの一覧を参照してください"^]です。
 
 
 

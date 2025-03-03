@@ -44,6 +44,6 @@ Cloud Manager からボリュームを作成するときに Storage Efficiency �
 * NFSv4 はサポートされていません。NFSv3 がサポートされています。
 * 一部のリージョンでは HA ペアがサポートされません。
 +
-https://cloud.netapp.com/cloud-volumes-global-regions["サポートされる Azure リージョンの一覧を参照してください"^]
+https://bluexp.netapp.com/cloud-volumes-global-regions["サポートされる Azure リージョンの一覧を参照してください"^]
 
 

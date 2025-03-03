@@ -62,7 +62,7 @@ link:reference-limits-gcp.html["Google Cloud のディスク制限について�
 このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。
 
 . SSD の使用時には書き込みパフォーマンスの向上が実現します。
-. Google Cloud Platform リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
+. Google Cloud Platformリージョンのサポートについては、を参照してください https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
 . Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
 
 
